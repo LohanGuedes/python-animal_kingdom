@@ -94,7 +94,9 @@ def main():
 
     # Step 5: loop through the list's above, and add each object created to the **animals** list
     animals = []
-
+    for mamal in mamals_list:
+        animal = Mamal(*mamal)
+        print(animal)
 
     
     # Step 6: Solve the requirements below....
