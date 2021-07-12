@@ -1,24 +1,46 @@
 # Step 1: Create an Animal base class
-# the class should support "name" and "year_discovered" properties
+# the class should support "name" and "year_discovered" properties X
 class Animal:
     def __init__(self, name, year_discovered):
         self.name = name
         self.year_discovered = year_discovered
     
+    def __repr__(self):
+        return f"Name: {self.name} - Year Discovered {self.year_discovered}"
 
-# Step 2: Create a Mamal class that inherits from your Animal base class
-# be sure to create the class variables move, breathe and reproduce and assign
+    def __srt__(self):
+        return f"Animal:{self.name} discovered: {self.year_discovered}" # Step 2: Create a Mamal class that inherits from your Animal base class X be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
+class Mamal(Animal):
+    def __init__(self, name, year_discovered, move, breath, reproduce):
+        super().__init__(name, year_discovered)
+        self.move = move
+        self.breath = breath
+        self.reproduce = reproduce
+    
+    def breath_type(self):
+        return f"Breath: {self.breath}"
 
 
 # Step 3: Create a Bird class and that inherits from your Animal base class
 # be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
-
+class Bird(Animal):
+    def __init__(self, name, year_discovered, move, breath, reproduce):
+        super().__init__(name, year_discovered)
+        self.move = 'fly'
+        self.breath = 'lungs'
+        self.reproduce = 'eggs'
 
 # Step 4: Create a Fish class that inherits from your Animal base class
 # be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
+class Fish(Animal):
+    def __init__(self, name, year_discovered, move, breath, reproduce):
+        super().__init__(name, year_discovered)
+        self.move = move
+        self.breath = breath
+        self.reproduce = reproduce
 
 
 def main():

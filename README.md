@@ -14,8 +14,8 @@ Using a combination of classes, lambda expressions and List Comprehension you wi
 
 * [x] Please fork and clone this repository. Regularly commit and push your code as appropriate.
 * [x] Create an base class to be used for all animals
-  * [ ] Each animal is assigned a name, and year discovered regardless of classification.
-  * [ ] Each animal should have a method that returns the assigned name and year discovered.
+  * [x] Each animal is assigned a name, and year discovered regardless of classification.
+  * [x] Each animal should have a method that returns the assigned name and year discovered.
 
 - [ ] Methods will return a string saying how that animal implements the action
   - [ ] All animals can move, breath, reproduce. How they do that, so what string should get returned when the method is executed, varies by animal type.
