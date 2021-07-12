@@ -17,13 +17,13 @@ Using a combination of classes, lambda expressions and List Comprehension you wi
   * [x] Each animal is assigned a name, and year discovered regardless of classification.
   * [x] Each animal should have a method that returns the assigned name and year discovered.
 
-- [ ] Methods will return a string saying how that animal implements the action
-  - [ ] All animals can move, breath, reproduce. How they do that, so what string should get returned when the method is executed, varies by animal type.
+- [x] Methods will return a string saying how that animal implements the action
+  - [x] All animals can move, breath, reproduce. How they do that, so what string should get returned when the method is executed, varies by animal type.
 
-* [ ] Create classes for mammals, birds, fish
-  * [ ] Mammals move - walk, breath - lungs, reproduce - live births
-  * [ ] Birds move - fly, breath - lungs, reproduce - eggs
-  * [ ] Fish move - swim, breath - gills, reproduce - eggs
+* [x] Create classes for mammals, birds, fish
+  * [x] Mammals move - walk, breath - lungs, reproduce - live births
+  * [x] Birds move - fly, breath - lungs, reproduce - eggs
+  * [x] Fish move - swim, breath - gills, reproduce - eggs
 
 Create a collection for ALL the animals using the following data
 
