@@ -12,35 +12,59 @@ class Animal:
         return f"Animal:{self.name} discovered: {self.year_discovered}" # Step 2: Create a Mamal class that inherits from your Animal base class X be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
 class Mamal(Animal):
-    def __init__(self, name, year_discovered, move, breath, reproduce):
+    def __init__(self, name, year_discovered, move='walk', breath='lungs', reproduce='live births'):
         super().__init__(name, year_discovered)
         self.move = move
         self.breath = breath
         self.reproduce = reproduce
     
+    def move_type(self):
+        return f"Move: {self.move}"
+
     def breath_type(self):
-        return f"Breath: {self.breath}"
+        return f"Breathe: {self.breath}"
+
+    def repo_type(self):
+        return f"Reproduces: {self.reproduce}"
 
 
 # Step 3: Create a Bird class and that inherits from your Animal base class
 # be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
 class Bird(Animal):
-    def __init__(self, name, year_discovered, move, breath, reproduce):
+    def __init__(self, name, year_discovered, move='fly', breath='lungs', reproduce='eggs'):
         super().__init__(name, year_discovered)
-        self.move = 'fly'
-        self.breath = 'lungs'
-        self.reproduce = 'eggs'
+        self.move = move
+        self.breath = breath
+        self.reproduce = reproduce
+
+    def move_type(self):
+        return f"Move: {self.move}"
+
+    def breath_type(self):
+        return f"Breathe: {self.breath}"
+
+    def repo_type(self):
+        return f"Reproduces: {self.reproduce}"
 
 # Step 4: Create a Fish class that inherits from your Animal base class
 # be sure to create the class variables move, breathe and reproduce and assign
 # the values descirbed in the README for this animal type.
 class Fish(Animal):
-    def __init__(self, name, year_discovered, move, breath, reproduce):
+    def __init__(self, name, year_discovered, move='swim', breath='gills', reproduce='eggs'):
         super().__init__(name, year_discovered)
         self.move = move
         self.breath = breath
         self.reproduce = reproduce
+
+    def move_type(self):
+        return f"Move: {self.move}"
+
+    def breath_type(self):
+        return f"Breathe: {self.breath}"
+
+    def repo_type(self):
+        return f"Reproduces: {self.reproduce}"
 
 
 def main():
@@ -99,3 +123,4 @@ def main():
 
 if __name__ == "__main__":
     # be sure to call your main method
+    main()
