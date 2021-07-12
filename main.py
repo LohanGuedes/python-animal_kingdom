@@ -1,5 +1,3 @@
-# Step 1: Create an Animal base class
-# the class should support "name" and "year_discovered" properties X
 class Animal:
     def __init__(self, name, year_discovered):
         self.name = name
@@ -10,7 +8,7 @@ class Animal:
 
     def __srt__(self):
         return f"Animal:{self.name} discovered: {self.year_discovered}" # Step 2: Create a Mamal class that inherits from your Animal base class X be sure to create the class variables move, breathe and reproduce and assign
-# the values descirbed in the README for this animal type.
+        
 class Mamal(Animal):
     def __init__(self, name, year_discovered, move='walk', breath='lungs', reproduce='live births'):
         super().__init__(name, year_discovered)
@@ -27,10 +25,6 @@ class Mamal(Animal):
     def repo_type(self):
         return f"Reproduces: {self.reproduce}"
 
-
-# Step 3: Create a Bird class and that inherits from your Animal base class
-# be sure to create the class variables move, breathe and reproduce and assign
-# the values descirbed in the README for this animal type.
 class Bird(Animal):
     def __init__(self, name, year_discovered, move='fly', breath='lungs', reproduce='eggs'):
         super().__init__(name, year_discovered)
@@ -47,9 +41,6 @@ class Bird(Animal):
     def repo_type(self):
         return f"Reproduces: {self.reproduce}"
 
-# Step 4: Create a Fish class that inherits from your Animal base class
-# be sure to create the class variables move, breathe and reproduce and assign
-# the values descirbed in the README for this animal type.
 class Fish(Animal):
     def __init__(self, name, year_discovered, move='swim', breath='gills', reproduce='eggs'):
         super().__init__(name, year_discovered)
@@ -95,9 +86,7 @@ def main():
     # Step 5: loop through the list's above, and add each object created to the **animals** list
     animals = []
     for mamal in mamals_list:
-        animal = Mamal(*mamal)
-        print(animal)
-
+        for 
     
     # Step 6: Solve the requirements below....
     # HINT: Be sure to create new lists when sorting 
