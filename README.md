@@ -12,8 +12,8 @@ Using a combination of classes, lambda expressions and List Comprehension you wi
 
 ## Instruction
 
-* [ ] Please fork and clone this repository. Regularly commit and push your code as appropriate.
-* [ ] Create an base class to be used for all animals
+* [x] Please fork and clone this repository. Regularly commit and push your code as appropriate.
+* [x] Create an base class to be used for all animals
   * [ ] Each animal is assigned a name, and year discovered regardless of classification.
   * [ ] Each animal should have a method that returns the assigned name and year discovered.
 

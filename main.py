@@ -1,6 +1,10 @@
 # Step 1: Create an Animal base class
 # the class should support "name" and "year_discovered" properties
-
+class Animal:
+    def __init__(self, name, year_discovered):
+        self.name = name
+        self.year_discovered = year_discovered
+    
 
 # Step 2: Create a Mamal class that inherits from your Animal base class
 # be sure to create the class variables move, breathe and reproduce and assign
