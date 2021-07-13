@@ -86,8 +86,18 @@ def main():
     # Step 5: loop through the list's above, and add each object created to the **animals** list
     animals = []
     for mamal in mamals_list:
-        for 
+        obj = Mamal(*mamal.values()) 
+        animals.append(obj) 
     
+    for bird in birds_list:
+        obj = Bird(*bird.values())
+        animals.append(obj)
+
+    for fish in fishes_list:
+        obj = Fish(*fish.values())
+        animals.append(obj)
+    
+
     # Step 6: Solve the requirements below....
     # HINT: Be sure to create new lists when sorting 
     # and NOT altering a list in place. Assign the result to the **sorted_animals** list
