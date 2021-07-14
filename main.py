@@ -10,11 +10,14 @@ class Animal:
         return f"Animal:{self.name} discovered: {self.year_discovered}" # Step 2: Create a Mamal class that inherits from your Animal base class X be sure to create the class variables move, breathe and reproduce and assign
         
 class Mamal(Animal):
-    def __init__(self, name, year_discovered, move='walk', breath='lungs', reproduce='live births'):
+    def __init__(self, name, year_discovered):
         super().__init__(name, year_discovered)
-        self.move = move
-        self.breath = breath
-        self.reproduce = reproduce
+        _move = 'walk'
+        _breath = 'lungs'
+        _reproduce = 'live birth'
+        self.move = _move
+        self.breath = _breath
+        self.reproduce = _reproduce
     
     def move_type(self):
         return f"Move: {self.move}"
@@ -26,11 +29,14 @@ class Mamal(Animal):
         return f"Reproduces: {self.reproduce}"
 
 class Bird(Animal):
-    def __init__(self, name, year_discovered, move='fly', breath='lungs', reproduce='eggs'):
+    def __init__(self, name, year_discovered):
         super().__init__(name, year_discovered)
-        self.move = move
-        self.breath = breath
-        self.reproduce = reproduce
+        _move = 'fly'
+        _breath = 'lungs'
+        _reproduce = 'eggs'
+        self.move =  _move
+        self.breath = _breath
+        self.reproduce = _reproduce
 
     def move_type(self):
         return f"Move: {self.move}"
@@ -42,11 +48,14 @@ class Bird(Animal):
         return f"Reproduces: {self.reproduce}"
 
 class Fish(Animal):
-    def __init__(self, name, year_discovered, move='swim', breath='gills', reproduce='eggs'):
+    def __init__(self, name, year_discovered):
         super().__init__(name, year_discovered)
-        self.move = move
-        self.breath = breath
-        self.reproduce = reproduce
+        _move = 'swim'
+        _breath = 'gills'
+        _reproduce = 'eggs'
+        self.move = _move
+        self.breath = _breath
+        self.reproduce = _reproduce
 
     def move_type(self):
         return f"Move: {self.move}"
@@ -68,6 +77,7 @@ def main():
         {"name": "Raccoon", "year": 1758},
         {"name": "BigFoot", "year": 2021},
     ]
+
 
     birds_list = [
         {"name": "Pigeon", "year": 1837},
@@ -97,7 +107,6 @@ def main():
         obj = Fish(*fish.values())
         animals.append(obj)
     
-
     # Step 6: Solve the requirements below....
     # HINT: Be sure to create new lists when sorting 
     # and NOT altering a list in place. Assign the result to the **sorted_animals** list
