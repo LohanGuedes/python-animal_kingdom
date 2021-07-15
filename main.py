@@ -196,7 +196,7 @@ def main():
         )
 
     print("\n\n*** Stretch Goal ***")
-    print("*** List alphabetically only those animals that are mammals===")
+    print("*** List alphabetically only those animals that are mammals***")
     sorted_animals = [animal for animal in animals if isinstance(animal, Mamal) == True]
     sorted_animals = sorted(sorted_animals, key=name_S)
     for animal in sorted_animals:
