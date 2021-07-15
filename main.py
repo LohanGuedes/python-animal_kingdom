@@ -1,14 +1,16 @@
+#Creatin the baseclass animals
 class Animal:
     def __init__(self, name, year_discovered):
         self.name = name
         self.year_discovered = year_discovered
     
     def __repr__(self):
-        return f"Name: {self.name} - Year Discovered {self.year_discovered}"
+        return f"Name: {self.name}, Year Discovered {self.year_discovered}"
 
     def __srt__(self):
         return f"Animal:{self.name} discovered: {self.year_discovered}" # Step 2: Create a Mamal class that inherits from your Animal base class X be sure to create the class variables move, breathe and reproduce and assign
         
+# Creating subclasses for each: Mamals, Birds, and Fishes
 class Mamal(Animal):
     def __init__(self, name, year_discovered):
         super().__init__(name, year_discovered)
@@ -93,8 +95,11 @@ def main():
         {"name": "Perch", "year": 1758},
     ]
 
-    # Step 5: loop through the list's above, and add each object created to the **animals** list
     animals = []
+
+    # Using the [*args] we can take each of the dictionaries in the list and append
+    # each on in the animals list, and with the ".values()" the data inside the dictionary
+    # previously extracted from the list is stored inside each requirement inside the Class __init__ function.
     for mamal in mamals_list:
         obj = Mamal(*mamal.values()) 
         animals.append(obj) 
@@ -114,12 +119,28 @@ def main():
     # https://stackoverflow.com/questions/403421/how-to-sort-a-list-of-objects-based-on-an-attribute-of-the-objects
 
     sorted_animals = None
+    # Sort by the desired value.
+    year_S   = lambda animal: animal.year_discovered 
+    name_S   = lambda animal: animal.name 
+    move_S   = lambda animal: animal.move 
+
+
+    # Output:
     print("=== List all the animals in descending order by year named ===")
+    sorted_animals = sorted(animals, key=year_S, reverse=True)
+    for animal in sorted_animals:
+        print("{ name:", animal.name, "year_discovered:", animal.year_discovered, "}") 
 
     print("\n\n=== List all the animals alphabetically ===")
-
+    sorted_animals = sorted(animals, key=name_S)
+    for animal in sorted_animals:
+        print("{ name:", animal.name, "}")
+    
     print("\n\n=== List all the animals order by how they move ===")
-
+    sorted_animals = sorted(animals, key=move_S)
+    for animal in sorted_animals:
+        print("{ name:", animal.name, "move:", animal.move)
+    
     print("\n\n=== List only those animals the breath with lungs ===")
 
     print(
@@ -132,5 +153,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # be sure to call your main method
     main()
