@@ -58,9 +58,9 @@ Create a collection for ALL the animals using the following data
     | Perch     | 1758 |
 
 * Using Pythons `sort` display the results to the console
-  * [ ] List all the animals in descending order by year named
-  * [ ] List all the animals alphabetically
-  * [ ] List all the animals order by how they move
+  * [x] List all the animals in descending order by year named
+  * [x] List all the animals alphabetically
+  * [x] List all the animals order by how they move
 
 * Using List Comprehensions display the results to the console
   * [ ] List only those animals the breath with lungs
