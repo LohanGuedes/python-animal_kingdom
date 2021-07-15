@@ -118,13 +118,14 @@ def main():
     year_S   = lambda animal: animal.year_discovered 
     name_S   = lambda animal: animal.name 
     move_S   = lambda animal: animal.move 
+    lung_S   = lambda animal: animal.breath
 
 
     # Output:
     print("=== List all the animals in descending order by year named ===")
     sorted_animals = sorted(animals, key=year_S, reverse=True)
     for animal in sorted_animals:
-        print("{ name:", animal.name, "year_discovered:", animal.year_discovered, "}") 
+        print("{ name:", animal.name + ",", "year_discovered:", animal.year_discovered, "}") 
 
     print("\n\n=== List all the animals alphabetically ===")
     sorted_animals = sorted(animals, key=name_S)
@@ -134,9 +135,13 @@ def main():
     print("\n\n=== List all the animals order by how they move ===")
     sorted_animals = sorted(animals, key=move_S)
     for animal in sorted_animals:
-        print("{ name:", animal.name, "move:", animal.move, "}")
+        print("{ name:", animal.name + ",", "move:", animal.move, "}")
     
     print("\n\n=== List only those animals the breath with lungs ===")
+    sorted_animals = sorted(animals, key=lung_S)
+    for animal in sorted_animals:
+        if animal.breath == "lungs":
+            print("{ name:", animal.name + ",", "breath:", animal.breath, "}")
 
     print(
         "\n\n=== List only those animals that breath with lungs and were named in 1758 ==="
