@@ -154,6 +154,10 @@ def main():
         print("{ name:", animal.name + ",", "breathes:", animal.breath + ",", "reproduces:", animal.reproduce, "}")
 
     print("\n\n=== List alphabetically only those animals that were named in 1758 ===")
+    sorted_animals = sorted(animals, key=year_S)
+    sorted_alpha_1758 = [animal for animal in sorted_animals if animal.year_discovered == 1758]
+    for animal in sorted_alpha_1758:
+        print("{ name:", animal.name + ",", "year_discovered:", animal.year_discovered, "}")
 
 
 if __name__ == "__main__":
