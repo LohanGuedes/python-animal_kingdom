@@ -8,7 +8,7 @@ class Animal:
         return f"Name: {self.name}, Year Discovered {self.year_discovered}"
 
     def __srt__(self):
-        return f"Animal:{self.name} discovered: {self.year_discovered}"  
+        return f"Animal:{self.name} discovered: {self.year_discovered}"
 
 
 # Creating subclasses for each: Mamals, Birds, and Fishes
@@ -157,7 +157,9 @@ def main():
     ]
     for animal in sorted_animals:
         print(
-            "{ breath:",
+            "{ name:",
+            animal.name + ",",
+            "breath:",
             animal.breath + ",",
             "year_discovered:",
             animal.year_discovered,
