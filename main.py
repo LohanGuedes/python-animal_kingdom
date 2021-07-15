@@ -97,7 +97,7 @@ def main():
 
     animals = []
 
-    # Using the [*args] we can take each of the dictionaries in the list and append
+    # Using the [*args] we can take each of the dictionaries inside the list and append
     # each on in the animals list, and with the ".values()" the data inside the dictionary
     # previously extracted from the list is stored inside each requirement inside the Class __init__ function.
     for mamal in mamals_list:
@@ -112,14 +112,9 @@ def main():
         obj = Fish(*fish.values())
         animals.append(obj)
     
-    # Step 6: Solve the requirements below....
-    # HINT: Be sure to create new lists when sorting 
-    # and NOT altering a list in place. Assign the result to the **sorted_animals** list
-    # 
-    # https://stackoverflow.com/questions/403421/how-to-sort-a-list-of-objects-based-on-an-attribute-of-the-objects
 
-    sorted_animals = None
     # Sort by the desired value.
+    sorted_animals = None
     year_S   = lambda animal: animal.year_discovered 
     name_S   = lambda animal: animal.name 
     move_S   = lambda animal: animal.move 
@@ -139,7 +134,7 @@ def main():
     print("\n\n=== List all the animals order by how they move ===")
     sorted_animals = sorted(animals, key=move_S)
     for animal in sorted_animals:
-        print("{ name:", animal.name, "move:", animal.move)
+        print("{ name:", animal.name, "move:", animal.move, "}")
     
     print("\n\n=== List only those animals the breath with lungs ===")
 
