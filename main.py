@@ -118,8 +118,6 @@ def main():
     year_S   = lambda animal: animal.year_discovered 
     name_S   = lambda animal: animal.name 
     move_S   = lambda animal: animal.move 
-    lung_S   = lambda animal: animal.breath
-
 
     # Output:
     print("=== List all the animals in descending order by year named ===")
@@ -138,16 +136,22 @@ def main():
         print("{ name:", animal.name + ",", "move:", animal.move, "}")
     
     print("\n\n=== List only those animals the breath with lungs ===")
-    sorted_animals = sorted(animals, key=lung_S)
+    sorted_animals = [animal for animal in animals if animal.breath == 'lungs']
     for animal in sorted_animals:
-        if animal.breath == "lungs":
-            print("{ name:", animal.name + ",", "breath:", animal.breath, "}")
-
+        print("{ name:", animal.name + ",", "breathe:", animal.breath, "}")
+     
     print(
         "\n\n=== List only those animals that breath with lungs and were named in 1758 ==="
     )
+    sorted_animals = [animal for animal in animals if animal.breath == 'lungs' and animal.year_discovered == 1758]
+    for animal in sorted_animals:
+        print("{ breath:", animal.breath + ",", "year_discovered", animal.year_discovered, "}")
+
 
     print("\n\n=== List only those animals that lay eggs and breath with lungs ===")
+    sorted_animals = [animal for animal in animals if animal.reproduce == 'eggs' and animal.breath == 'lungs']
+    for animal in sorted_animals:
+        print("{ name:", animal.name + ",", "breathes:", animal.breath + ",", "reproduces:", animal.reproduce, "}")
 
     print("\n\n=== List alphabetically only those animals that were named in 1758 ===")
 

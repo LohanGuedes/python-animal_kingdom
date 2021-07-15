@@ -63,8 +63,8 @@ Create a collection for ALL the animals using the following data
   * [x] List all the animals order by how they move
 
 * Using List Comprehensions display the results to the console
-  * [ ] List only those animals the breath with lungs
-  * [ ] List only those animals that breath with lungs and were named in 1758
+  * [x] List only those animals the breath with lungs
+  * [x] List only those animals that breath with lungs and were named in 1758
   * [ ] List only those animals that lay eggs and breath with lungs
 
 * Using a Lambda AND List Comprehensions display the result to the console  
