@@ -155,10 +155,16 @@ def main():
 
     print("\n\n=== List alphabetically only those animals that were named in 1758 ===")
     sorted_animals = sorted(animals, key=name_S)
-    sorted_alpha_1758 = [animal for animal in sorted_animals if animal.year_discovered == 1758]
-    for animal in sorted_alpha_1758:
+    sorted_animals= [animal for animal in sorted_animals if animal.year_discovered == 1758]
+    for animal in sorted_animals:
         print("{ name:", animal.name + ",", "year_discovered:", animal.year_discovered, "}")
-
+    
+    print("\n\n*** Stretch Goal ***")
+    print("*** List alphabetically only those animals that are mammals===")
+    sorted_animals = [animal for animal in animals if isinstance(animal, Mamal) == True] 
+    sorted_animals = sorted(sorted_animals, key=name_S)
+    for animal in sorted_animals:
+        print(f"{animal.name} {animal.reproduce} {animal.move} {animal.breath} {animal.year_discovered}")
 
 if __name__ == "__main__":
     main()
