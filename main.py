@@ -159,7 +159,7 @@ def main():
         print(
             "{ breath:",
             animal.breath + ",",
-            "year_discovered",
+            "year_discovered:",
             animal.year_discovered,
             "}",
         )
